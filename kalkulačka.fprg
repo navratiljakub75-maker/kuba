@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="kalkula&#269;ka"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-04 08:59:57 dop."/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1KNEVKNzVNOzIwMjYtMDItMDQ7MDg6MDU6MjIgZG9wLjszMDE1"/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1KNEVKNzVNOzIwMjYtMDItMDQ7MDg6NTk6NTcgZG9wLjsxOzMxNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rad" type="Real" array="False" size=""/>
+            <declare name="operace" type="String" array="False" size=""/>
+            <declare name="cislo1" type="Real" array="False" size=""/>
+            <declare name="cislo2" type="Real" array="False" size=""/>
+            <declare name="vysledek" type="Real" array="False" size=""/>
+            <output expression="&quot;Zadej prvn&#237; &#269;&#237;slo:&quot;" newline="True"/>
+            <input variable="cislo1"/>
+            <output expression="&quot;Zadej druh&#233; &#269;&#237;slo&quot;" newline="True"/>
+            <input variable="cislo2"/>
+            <output expression="&quot;Zadej operaci (+,*,/,-,cos,sin,tan):&quot;" newline="True"/>
+            <input variable="operace"/>
+            <if expression="operace==&quot;+&quot;">
+                <then>
+                    <assign variable="vysledek" expression="cislo1+cislo2"/>
+                    <output expression="vysledek" newline="True"/>
+                </then>
+                <else>
+                    <if expression="operace=&quot;-&quot;">
+                        <then>
+                            <assign variable="vysledek" expression="cislo1-cislo2"/>
+                            <output expression="vysledek" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="operace=&quot;*&quot;">
+                                <then>
+                                    <assign variable="vysledek" expression="cislo1*cislo2"/>
+                                    <output expression="vysledek" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="operace=&quot;/&quot;">
+                                        <then>
+                                            <assign variable="vysledek" expression="cislo1/cislo2"/>
+                                            <output expression="vysledek" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="operace=&quot;sin&quot;">
+                                                <then>
+                                                    <assign variable="rad" expression="cislo1*PI/180"/>
+                                                    <assign variable="vysledek" expression="sin(rad)"/>
+                                                    <output expression="vysledek" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="operace=&quot;cos&quot;">
+                                                        <then>
+                                                            <assign variable="rad" expression="cislo1*PI/180"/>
+                                                            <assign variable="vysledek" expression="cos(rad)"/>
+                                                            <output expression="vysledek" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="operace=&quot;tan&quot;">
+                                                                <then>
+                                                                    <assign variable="rad" expression="cislo1*PI/180"/>
+                                                                    <assign variable="vysledek" expression="tan(rad)"/>
+                                                                    <output expression="vysledek" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <breakpoint expression="" always="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
